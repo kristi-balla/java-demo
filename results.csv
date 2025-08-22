@@ -1,0 +1,3 @@
+image,build_time(ms),image_size,startup_time(ms),container_memory,app_memory(MB)
+naive,2896,794M,30597,906MiB ,185776 kB
+multi-stage,34073,418M,6435,273.2MiB ,238648 kB
