@@ -2,3 +2,4 @@ image,build_time(ms),image_size,startup_time(ms),container_memory,app_memory(MB)
 naive,2896,794M,30597,906MiB ,185776 kB
 multi-stage,34073,418M,6435,273.2MiB ,238648 kB
 custom-jre,46524,168M,5361,223.5MiB ,255808 kB
+native,436518,39M,5073,126.7MiB ,127408 kB

@@ -12,6 +12,7 @@ log() {
 
 IMAGE=$1
 DOCKERFILE=$2
+PROJECT=$3
 NAME=test-$IMAGE
 CIDFILE=$(mktemp)
 CSVOUT=results.csv
@@ -20,7 +21,7 @@ log "▶️ Measuring for image: $IMAGE (from $DOCKERFILE)"
 
 # --- BUILD TIME ---
 build_start=$(date +%s%3N)
-docker build --no-cache -t "$IMAGE" -f "$DOCKERFILE" htmx/
+docker build --no-cache -t "$IMAGE" -f "$DOCKERFILE" "$PROJECT"
 build_end=$(date +%s%3N)
 build_time_ms=$(($build_end - $build_start))
 log "Build time: ${build_time_ms} ms"
