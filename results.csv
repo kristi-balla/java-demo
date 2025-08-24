@@ -1,6 +1,6 @@
-image      , build_time(ms), image_size, startup_time(ms), container_memory, app_memory(MB)
-naive      ,           1384, 823M      ,            36071, 993.2MiB        , 178768 kB
-multi-stage,          29166, 418M      ,            10509, 323.5MiB        , 280100 kB
-custom-jre ,          42934, 168M      ,            10345, 228MiB          , 261040 kB
-native     ,         587221, 107M      ,             5131, 26.74MiB        , 90760 kB
-upx        ,         412377, 39M       ,             5130, 126.7MiB        , 127404 kB
+image      , build_time(ms), image_size(MB), startup_time(ms), container_memory (MB), app_memory(MB)
+naive      ,           1384,            823,            36071,                993.2 ,         178.77
+multi-stage,          29166,            418,            10509,                323.5 ,         280.1
+custom-jre ,          42934,            168,            10345,                228   ,         261.04
+native     ,         331623,            107,             5074,                 26.74,          90.68
+upx        ,         412377,             39,             5130,                126.7 ,         127.40
