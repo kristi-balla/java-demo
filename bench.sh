@@ -55,7 +55,7 @@ docker stop "$cid" >/dev/null
 
 # --- WRITE TO CSV ---
 if [ ! -f "$CSVOUT" ]; then
-  echo "image,build_time(ms),image_size,startup_time(ms),container_memory,app_memory(MB)" > "$CSVOUT"
+  echo "image,build_time(ms),image_size,startup_time(ms),container_memory,app_memory(kb)" > "$CSVOUT"
 fi
 echo "$IMAGE,$build_time_ms,$img_size,$startup_ms,$cont_mem,$footprint" >> "$CSVOUT"
 
