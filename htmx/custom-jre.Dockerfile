@@ -1,11 +1,11 @@
-FROM gradle:8.14.3-jdk21 AS build
+FROM gradle:8.14.3-jdk21@sha256:42b9c012cb77c139f743e452a411ad26fb521a8fc0956265df2dca45b45e22f9 AS build
 
 WORKDIR /app
 COPY . .
 
 RUN gradle bootJar
 
-FROM eclipse-temurin:21 AS custom-jre
+FROM eclipse-temurin:21@sha256:2b9cd724df3c0797032bfcfebd268ba89e80a77e93c791c4cecd4d5e1202e027 AS custom-jre
 
 WORKDIR /custom
 
@@ -30,7 +30,7 @@ RUN jlink \
     --add-modules $(cat dependencies.txt) \
     --output jre
 
-FROM debian:12-slim
+FROM debian:12-slim@sha256:df52e55e3361a81ac1bead266f3373ee55d29aa50cf0975d440c2be3483d8ed3
 
 WORKDIR /prod
 COPY --from=custom-jre /custom/jre jre
